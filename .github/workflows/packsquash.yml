@@ -1,0 +1,20 @@
+name: Generate Resource Pack
+on: [push]
+jobs:
+  packsquash:
+    name: Optimize Resource Pack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Run PackSquash
+        uses: ComunidadAylas/PackSquash-action@v2
+        with:
+          image_color_quantization_target: none
+          percentage_of_zip_structures_tuned_for_obfuscation_discretion: 100
+          size_increasing_zip_obfuscation: true
+          zip_spec_conformance_level: disregard
+          transcode_ogg: false
+          audio_sampling_frequency: 0
