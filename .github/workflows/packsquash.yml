@@ -17,4 +17,3 @@ jobs:
           size_increasing_zip_obfuscation: true
           zip_spec_conformance_level: disregard
           transcode_ogg: false
-          audio_sampling_frequency: 0
